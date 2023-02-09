@@ -4189,7 +4189,7 @@ button {
   border-radius: 8px 5px 5px;
   box-shadow: 0 5px 20px rgba(206, 218, 228, 0.41);
   max-width: 1035px;
-  margin-left: 32px;
+ 
 }
 
 .pagination .page-numbers {
@@ -5918,7 +5918,7 @@ button {
   padding: 0 5px;
 }
 
-.cart .price__now {
+.cart .price__now, .cart ins {
   font-size: 18px;
   font-weight: 600;
 }
@@ -6756,17 +6756,18 @@ button {
   text-align: center;
   font-weight: 600;
   border-radius: 2px;
-  display: none;
+  
   color: #fff;
   text-transform: uppercase;
   line-height: 28px;
 }
 
+/*
 .products .price__old,
 .products .rate {
   display: none;
 }
-
+*/
 .products .rate {
   width: 70px;
   background-size: 14px 14px;
@@ -6806,28 +6807,33 @@ button {
   margin-right: 25px;
   width: calc(33.3% - 25px);
   background-color: #fff;
-  border-radius: 3px;
+  border-radius: 15px;
   box-shadow: 0 1px 4px rgba(206, 218, 228, 0.45), 0 0 16px rgba(160, 175, 185, 0.04);
 }
-
+.products__item:hover{
+    box-shadow: 0 5px 20px rgb(0 163 255 / 60%);
+}
 .products__item.sale .price {
   margin-right: 25px;
 }
-
-.products__item.sale .price__old {
+.woocommerce div.product {
+    margin-bottom: 22px!important;
+    position: relative;
+}
+.products__item.sale .price__old, .products__item del {
   text-decoration: line-through;
   font-size: 14px;
   margin-right: 10px;
 }
 
-.products__item.sale .price__now {
+.products__item.sale .price__now, .products__item ins {
   color: #00b8ff;
   font-size: 18px;
   font-weight: 600;
 }
 
 .products__item.sale span.discount,
-.products__item.sale .price__old,
+.products__item.sale .price__old, .products__item del,
 .products__item.sale .rate {
   display: block;
 }
@@ -10038,4 +10044,28 @@ aside.sidebar .widget{
 }
 aside.sidebar .widget .textwidget{
   padding: 20px 30px;
+}
+
+.woocommerce a.added_to_cart {
+ width: 100%;
+    text-align: center;
+       background-image: linear-gradient(to right, #0cf 0%, #00a2ff 100%);
+    color: #ffffff;
+    font-size: 14px;
+    padding-top: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.woocommerce a.added_to_cart:hover{
+     background-image: linear-gradient(to right, #fd5163 0%, #fe384d 100%);
+}
+
+.products__bottom{
+  flex-wrap: wrap;
+}
+.products__detail{
+  width: 70%;
 }

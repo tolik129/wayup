@@ -89,6 +89,42 @@ function aletheme_metaboxes($meta_boxes) {
         )
     );
 
+     $meta_boxes[] = array(
+        'id'         => 'woocommerce_metaboxes',
+        'title'      => 'Данные для товара',
+        'pages'      => array( 'product', ), // Post type
+        'context'    => 'normal',
+        'priority'   => 'high',
+        'show_names' => true, // Show field names on the left
+        //'show_on'    => array( 'key' => 'page-template', 'value' => array('template-contact.php'), ), // Specific post templates to display this metabox
+        'fields' => array(
+           array(
+              'name'  => 'Короткий заголовок',
+              'desc' => 'Укажите краткий заголовок',
+              'id' => $prefix . 'short_title',
+              'std' => '',
+              'type' => 'text',
+           ),
+           array(
+              'name'  => 'Текст кнопки',
+              'desc' => 'Укажите текст',
+              'id' => $prefix . 'sale_button_title',
+              'std' => '',
+              'type' => 'text',
+           ),
+            array(
+              'name'  => 'Цвет кнопки',
+              'desc' => 'Укажите цвет',
+              'id' => $prefix . 'sale_button_color',
+              'std' => '#fdba4a',
+              'type' => 'text',
+           ),
+         
+       
+           
+        )
+    );
+
     $meta_boxes[] = array(
         'id'         => 'contact_metaboxes',
         'title'      => 'Данные для Страницы контакты',

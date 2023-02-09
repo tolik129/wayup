@@ -24,14 +24,14 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	return;
 }
 ?>
-<div <?php wc_product_class( 'products__item', $product ); ?>>
+<div <?php wc_product_class( 'products__item' ); ?>>
 	<?php
 	/**
 	 * Hook: woocommerce_before_shop_loop_item.
 	 *
 	 * @hooked woocommerce_template_loop_product_link_open - 10
 	 */
-	//do_action( 'woocommerce_before_shop_loop_item' );
+	do_action( 'woocommerce_before_shop_loop_item' );
 
 	/**
 	 * Hook: woocommerce_before_shop_loop_item_title.
@@ -39,14 +39,18 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_show_product_loop_sale_flash - 10
 	 * @hooked woocommerce_template_loop_product_thumbnail - 10
 	 */
-	//do_action( 'woocommerce_before_shop_loop_item_title' );
+	do_action( 'woocommerce_before_shop_loop_item_title' );
+
+
+
+
 
 	/**
 	 * Hook: woocommerce_shop_loop_item_title.
 	 *
 	 * @hooked woocommerce_template_loop_product_title - 10
 	 */
-	//do_action( 'woocommerce_shop_loop_item_title' );
+	do_action( 'woocommerce_shop_loop_item_title' );
 
 	/**
 	 * Hook: woocommerce_after_shop_loop_item_title.
@@ -54,7 +58,7 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_rating - 5
 	 * @hooked woocommerce_template_loop_price - 10
 	 */
-	//do_action( 'woocommerce_after_shop_loop_item_title' );
+	do_action( 'woocommerce_after_shop_loop_item_title' );
 
 	/**
 	 * Hook: woocommerce_after_shop_loop_item.
@@ -62,28 +66,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	 * @hooked woocommerce_template_loop_product_link_close - 5
 	 * @hooked woocommerce_template_loop_add_to_cart - 10
 	 */
-	//do_action( 'woocommerce_after_shop_loop_item' );
+	do_action( 'woocommerce_after_shop_loop_item' );
 	?>
-
-	<a href="product-single.html" class="products__img">
-								<img src="img/product1.jpg" alt="product">
-							</a>
-							<div class="products__bottom">
-								<div class="products__detail">
-									<a href="product-single.html" class="products__name">Галстук Valentino</a>
-									<div class="price">
-										<div class="price__old"><span class="currency">$</span>89</div>
-										<div class="price__now"><span class="currency">$</span>67</div>
-									</div>
-									<div class="rate"></div>
-								</div>
-								<div class="products__btn">
-									<form method="get" class="products__form">
-										<input type="hidden" name="id">
-										<button type="submit" value="cart/add" title="Положить в корзину" class="products__but"></button>
-									</form>
-								</div>
-							</div>
-
-
 </div>
